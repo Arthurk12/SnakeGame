@@ -91,28 +91,28 @@ class Snake{
     draw(){
         for(let it = this.body.length-1; it >= 0; it--){
             if(!it==0 &&  it != this.body.length-1){
-                if(this.body[it].dir == "UP" && this.body[it-1].dir == "LEFT")  context.drawImage(this.turnImageLD, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "UP" && this.body[it-1].dir == "RIGHT")  context.drawImage(this.turnImageDR, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "UP")  context.drawImage(this.middleImageV, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "DOWN" && this.body[it-1].dir == "RIGHT") context.drawImage(this.turnImageRU, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "DOWN" && this.body[it-1].dir == "LEFT") context.drawImage(this.turnImageUL, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "DOWN") context.drawImage(this.middleImageV, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "RIGHT" && this.body[it-1].dir == "UP") context.drawImage(this.turnImageUL, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "RIGHT" && this.body[it-1].dir == "DOWN") context.drawImage(this.turnImageLD, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "RIGHT") context.drawImage(this.middleImageH, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "LEFT" && this.body[it-1].dir == "UP") context.drawImage(this.turnImageRU, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "LEFT" && this.body[it-1].dir == "DOWN") context.drawImage(this.turnImageDR, this.body[it].x, this.body[it].y);
-                else if(this.body[it].dir == "LEFT") context.drawImage(this.middleImageH, this.body[it].x, this.body[it].y);
+                if(this.body[it].dir == "UP" && this.body[it-1].dir == "LEFT")          context.drawImage(this.turnImageLD, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "UP" && this.body[it-1].dir == "RIGHT")    context.drawImage(this.turnImageDR, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "UP")                                      context.drawImage(this.middleImageV, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "DOWN" && this.body[it-1].dir == "RIGHT")  context.drawImage(this.turnImageRU, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "DOWN" && this.body[it-1].dir == "LEFT")   context.drawImage(this.turnImageUL, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "DOWN")                                    context.drawImage(this.middleImageV, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "RIGHT" && this.body[it-1].dir == "UP")    context.drawImage(this.turnImageUL, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "RIGHT" && this.body[it-1].dir == "DOWN")  context.drawImage(this.turnImageLD, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "RIGHT")                                   context.drawImage(this.middleImageH, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "LEFT" && this.body[it-1].dir == "UP")     context.drawImage(this.turnImageRU, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "LEFT" && this.body[it-1].dir == "DOWN")   context.drawImage(this.turnImageDR, this.body[it].x, this.body[it].y);
+                else if(this.body[it].dir == "LEFT")                                    context.drawImage(this.middleImageH, this.body[it].x, this.body[it].y);
             }else if(it == this.body.length-1){
-                if(this.body[it-1].dir == "UP" )  context.drawImage(this.tailImageUP, this.body[it].x, this.body[it].y);
-                else if(this.body[it-1].dir == "DOWN") context.drawImage(this.tailImageDOWN, this.body[it].x, this.body[it].y);
+                if(this.body[it-1].dir == "UP" )        context.drawImage(this.tailImageUP, this.body[it].x, this.body[it].y);
+                else if(this.body[it-1].dir == "DOWN")  context.drawImage(this.tailImageDOWN, this.body[it].x, this.body[it].y);
                 else if(this.body[it-1].dir == "RIGHT") context.drawImage(this.tailImageRIGHT, this.body[it].x, this.body[it].y);
-                else if(this.body[it-1].dir == "LEFT") context.drawImage(this.tailImageLEFT, this.body[it].x, this.body[it].y);
+                else if(this.body[it-1].dir == "LEFT")  context.drawImage(this.tailImageLEFT, this.body[it].x, this.body[it].y);
             }else if (it == 0){
-                if(this.direction == "UP")  context.drawImage(this.headImageUP, this.body[it].x, this.body[it].y);
-                else if(this.direction == "DOWN") context.drawImage(this.headImageDOWN, this.body[it].x, this.body[it].y);
-                else if(this.direction == "RIGHT") context.drawImage(this.headImageRIGHT, this.body[it].x, this.body[it].y);
-                else if(this.direction == "LEFT") context.drawImage(this.headImageLEFT, this.body[it].x, this.body[it].y);
+                if(this.direction == "UP")          context.drawImage(this.headImageUP, this.body[it].x, this.body[it].y);
+                else if(this.direction == "DOWN")   context.drawImage(this.headImageDOWN, this.body[it].x, this.body[it].y);
+                else if(this.direction == "RIGHT")  context.drawImage(this.headImageRIGHT, this.body[it].x, this.body[it].y);
+                else if(this.direction == "LEFT")   context.drawImage(this.headImageLEFT, this.body[it].x, this.body[it].y);
             }
 
         }
