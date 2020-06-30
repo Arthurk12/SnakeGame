@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 672px
+}
+
+.food{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.container{
+    max-width: 672px;
+    max-height: 768px;
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    padding: 64px 32px 32px 32px;
+    margin: 0;
+    background: #767B91;
+}
+
+.container div{
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+.container div:nth-child(odd){
+    background: #C7CCDB;
+}
+
+.container div:nth-child(even){
+    background: #E1E5EE;
+}
